@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/root_category">
+    <Button
+        android:id="@+id/math"
+        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginHorizontal="32dp"
+        android:text="Matematika"/>
+    <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/ona_tili"
+        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginHorizontal="32dp"
+        android:text="Ona tili"/>
+
+</LinearLayout>

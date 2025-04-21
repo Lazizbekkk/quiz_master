@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_category">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/top_imageview"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:0.65"
+        android:src="@drawable/img_yellow_children1"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/MenuImageShape"
+        >
+    </com.google.android.material.imageview.ShapeableImageView>
+    <com.airbnb.lottie.LottieAnimationView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/lottieAnimationInfo"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="12dp"
+        android:padding="2dp"
+
+        app:lottie_rawRes="@raw/info_json"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        />
+
+    <TextView
+        android:fontFamily="@font/desc_font2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="6sp"
+        android:padding="10dp"
+        android:text="Assalomu alaykum \n Quiz Masterga \nxush kelibsiz."
+        android:textAlignment="center"
+        android:textColor="#423D3D"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintVertical_bias=".5"
+        app:layout_constraintBottom_toTopOf="@+id/fan_category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:fontFamily="@font/desc_font2"
+        android:paddingHorizontal="16dp"
+        android:id="@+id/fan_category"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Savollar kategoriyasi"
+        android:textSize="16sp"
+        android:layout_marginStart="8dp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_category"
+        android:layout_marginHorizontal="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_science"
+        tools:itemCount="9"
+
+        app:layout_constraintTop_toBottomOf="@+id/fan_category" />
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias=".92"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:text="Davom etish"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:visibility="invisible"
+            android:background="@drawable/bg_category_btn"
+            android:layout_width="180dp"
+            android:layout_height="55dp"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
